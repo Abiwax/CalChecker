@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vQr-yN-3S0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vQr-yN-3S0">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -23,71 +23,72 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="67z-HK-SnK">
-                                <rect key="frame" x="16" y="60" width="343" height="0.0"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" red="0.79213892490000004" green="0.16942785909999999" blue="0.13925217049999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Food search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wWy-f1-zMW">
-                                <rect key="frame" x="16" y="70" width="343" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUD-uB-Avl">
-                                <rect key="frame" x="16" y="110" width="343" height="32"/>
-                                <color key="backgroundColor" red="0.61106043781725883" green="0.41111291340611988" blue="0.52983690348776369" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Cochin-Bold" family="Cochin" pointSize="17"/>
-                                <state key="normal" title="Search">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonSearch:" destination="5xJ-lz-C43" eventType="touchUpInside" id="j6j-NS-YoI"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="natural" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YeX-0q-xd7">
-                                <rect key="frame" x="16" y="152" width="46.5" height="100"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NLF-ga-Sbx">
-                                <rect key="frame" x="82.5" y="152" width="276.5" height="100"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DlP-Ug-QMq">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KGi-qh-bSz">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="136.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="zdF-Ux-1Vk">
+                                                <rect key="frame" x="10" y="20" width="355" height="116.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="67z-HK-SnK">
+                                                        <rect key="frame" x="0.0" y="0.0" width="355" height="14.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <color key="textColor" red="0.79213892490000004" green="0.16942785909999999" blue="0.13925217049999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Food search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wWy-f1-zMW">
+                                                        <rect key="frame" x="0.0" y="34.5" width="355" height="30"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUD-uB-Avl">
+                                                        <rect key="frame" x="0.0" y="84.5" width="355" height="32"/>
+                                                        <color key="backgroundColor" red="0.61106043781725883" green="0.41111291340611988" blue="0.52983690348776369" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="Cochin-Bold" family="Cochin" pointSize="17"/>
+                                                        <state key="normal" title="Search">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="buttonSearch:" destination="5xJ-lz-C43" eventType="touchUpInside" id="j6j-NS-YoI"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="zdF-Ux-1Vk" secondAttribute="bottom" id="GDt-LB-pMU"/>
+                                            <constraint firstAttribute="trailing" secondItem="zdF-Ux-1Vk" secondAttribute="trailing" constant="10" id="WlS-aY-hD3"/>
+                                            <constraint firstItem="zdF-Ux-1Vk" firstAttribute="leading" secondItem="KGi-qh-bSz" secondAttribute="leading" constant="10" id="XQh-yO-9AQ"/>
+                                            <constraint firstItem="zdF-Ux-1Vk" firstAttribute="top" secondItem="KGi-qh-bSz" secondAttribute="top" constant="20" id="tnR-qd-1Rv"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="wSy-tv-VGj"/>
+                                    <constraint firstAttribute="trailing" secondItem="KGi-qh-bSz" secondAttribute="trailing" id="DRZ-Ki-hbx"/>
+                                    <constraint firstItem="KGi-qh-bSz" firstAttribute="centerX" secondItem="DlP-Ug-QMq" secondAttribute="centerX" id="GHv-4F-MBP"/>
+                                    <constraint firstAttribute="bottom" secondItem="KGi-qh-bSz" secondAttribute="bottom" id="ZQm-3Q-84x"/>
+                                    <constraint firstItem="KGi-qh-bSz" firstAttribute="leading" secondItem="DlP-Ug-QMq" secondAttribute="leading" id="fsd-Ty-Q52"/>
+                                    <constraint firstItem="KGi-qh-bSz" firstAttribute="top" secondItem="DlP-Ug-QMq" secondAttribute="top" id="tzX-pe-cPB"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Q9H-sS-09W" firstAttribute="top" relation="greaterThanOrEqual" secondItem="NLF-ga-Sbx" secondAttribute="bottom" id="6Z3-oU-f9R"/>
-                            <constraint firstItem="67z-HK-SnK" firstAttribute="top" secondItem="SJU-nu-6km" secondAttribute="bottom" constant="60" id="6jT-uh-Jax"/>
-                            <constraint firstItem="kUD-uB-Avl" firstAttribute="top" secondItem="wWy-f1-zMW" secondAttribute="bottom" constant="10" id="AQH-U2-qzi"/>
-                            <constraint firstItem="NLF-ga-Sbx" firstAttribute="trailing" secondItem="Lif-7J-gMM" secondAttribute="trailingMargin" id="C73-Dc-AWM"/>
-                            <constraint firstItem="wWy-f1-zMW" firstAttribute="trailing" secondItem="Lif-7J-gMM" secondAttribute="trailingMargin" id="DbH-d0-6MY"/>
-                            <constraint firstItem="wWy-f1-zMW" firstAttribute="leading" secondItem="Lif-7J-gMM" secondAttribute="leadingMargin" id="Idn-e7-6dB"/>
-                            <constraint firstItem="YeX-0q-xd7" firstAttribute="bottom" secondItem="NLF-ga-Sbx" secondAttribute="bottom" id="JoN-JA-fcq"/>
-                            <constraint firstItem="67z-HK-SnK" firstAttribute="trailing" secondItem="Lif-7J-gMM" secondAttribute="trailingMargin" id="M1A-nh-dGj"/>
-                            <constraint firstItem="YeX-0q-xd7" firstAttribute="height" secondItem="NLF-ga-Sbx" secondAttribute="height" id="MTS-vP-O6w"/>
-                            <constraint firstItem="NLF-ga-Sbx" firstAttribute="leading" secondItem="YeX-0q-xd7" secondAttribute="trailing" constant="20" id="Pd7-Aa-nZk"/>
-                            <constraint firstItem="YeX-0q-xd7" firstAttribute="leading" secondItem="Lif-7J-gMM" secondAttribute="leadingMargin" id="YM2-Cc-SuB"/>
-                            <constraint firstItem="NLF-ga-Sbx" firstAttribute="top" secondItem="kUD-uB-Avl" secondAttribute="bottom" constant="10" id="ZVO-yv-KxC"/>
-                            <constraint firstItem="kUD-uB-Avl" firstAttribute="trailing" secondItem="Lif-7J-gMM" secondAttribute="trailingMargin" id="ckO-nn-0he"/>
-                            <constraint firstItem="67z-HK-SnK" firstAttribute="leading" secondItem="Lif-7J-gMM" secondAttribute="leadingMargin" id="dYu-yt-aDS"/>
-                            <constraint firstItem="kUD-uB-Avl" firstAttribute="leading" secondItem="Lif-7J-gMM" secondAttribute="leadingMargin" id="e28-8i-suM"/>
-                            <constraint firstItem="wWy-f1-zMW" firstAttribute="top" secondItem="67z-HK-SnK" secondAttribute="bottom" constant="10" id="sEG-UO-BJF"/>
-                            <constraint firstItem="YeX-0q-xd7" firstAttribute="top" secondItem="NLF-ga-Sbx" secondAttribute="top" id="ziu-bZ-1vd"/>
+                            <constraint firstAttribute="trailing" secondItem="DlP-Ug-QMq" secondAttribute="trailing" id="EXy-MA-0X0"/>
+                            <constraint firstItem="DlP-Ug-QMq" firstAttribute="top" secondItem="SJU-nu-6km" secondAttribute="bottom" id="LHu-De-2ko"/>
+                            <constraint firstItem="Q9H-sS-09W" firstAttribute="top" secondItem="DlP-Ug-QMq" secondAttribute="bottom" id="VIh-ib-w81"/>
+                            <constraint firstItem="DlP-Ug-QMq" firstAttribute="leading" secondItem="Lif-7J-gMM" secondAttribute="leading" id="m0A-Yf-eCr"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Search for food" id="DWx-eG-Ydx"/>
                     <connections>
                         <outlet property="buttonText" destination="kUD-uB-Avl" id="3iG-jg-aWe"/>
                         <outlet property="errorLabel" destination="67z-HK-SnK" id="3jz-iX-Mci"/>
-                        <outlet property="infoText" destination="NLF-ga-Sbx" id="vXN-Z7-34Y"/>
                         <outlet property="searchText" destination="wWy-f1-zMW" id="joN-vd-9hm"/>
                     </connections>
                 </viewController>
@@ -210,7 +211,7 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="95"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5W0-bX-g8f" id="rMP-mF-LJJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="310" height="94"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="310" height="94.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dF1-bc-958">

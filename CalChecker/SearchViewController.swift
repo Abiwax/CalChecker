@@ -13,10 +13,9 @@ class SearchViewController: UIViewController{
     @IBOutlet var buttonText: UIButton!
     @IBOutlet var errorLabel: UILabel!
     
-    @IBOutlet var infoText: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad();
-        infoText.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed tortor convallis, scelerisque dui sed, tincidunt velit. In non interdum massa. Sed justo erat, rhoncus eu felis in, viverra mollis arcu. Ut et magna eget lacus dictum sollicitudin. Etiam metus nisi, volutpat et eros nec, consectetur consectetur justo. Vivamus porttitor, dui eu suscipit gravida, enim ligula consectetur lorem, sed cursus dui ante ut justo. Proin tincidunt venenatis mauris sollicitudin sodales. Curabitur blandit dignissim efficitur. Nunc ligula dui, dapibus nec ipsum ac, sagittis lobortis enim. Maecenas vel est sed ipsum fermentum consectetur quis non enim. Nulla facilisi. Sed sit amet enim eget purus rhoncus mattis ut ac ex. Suspendisse ornare sapien in ligula vulputate, a fringilla mauris consequat. In aliquam ex vitae neque hendrerit tincidunt. Aenean felis sapien, laoreet a tortor ornare, gravida rhoncus turpis."
+        
     }
     
     

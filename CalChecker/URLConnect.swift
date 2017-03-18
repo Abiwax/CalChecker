@@ -7,3 +7,29 @@
 //
 
 import UIKit
+
+class URLConnect{
+    
+    func number(section: Int) -> Int {
+        
+        guard let device = DevicesEnum(rawValue: section) else {
+            fatalError()
+        }
+        
+        let number: Int
+        switch device{
+        case .Ipod:
+            number = 12
+        case .Iphone:
+            number = 2
+        }
+        
+        return number
+    }
+    
+}
+
+enum DevicesEnum: Int{
+    case Ipod
+    case Iphone
+}

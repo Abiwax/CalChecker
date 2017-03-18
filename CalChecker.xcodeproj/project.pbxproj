@@ -7,21 +7,51 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E6C0D151DE361320055D87C /* URLConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6C0D141DE361320055D87C /* URLConnect.swift */; };
+		1E8395161DA85A6A00692867 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8395151DA85A6A00692867 /* RecipeViewController.swift */; };
 		1EA4C3861DA6304700855D6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA4C3851DA6304700855D6B /* AppDelegate.swift */; };
-		1EA4C3881DA6304700855D6B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA4C3871DA6304700855D6B /* ViewController.swift */; };
 		1EA4C38B1DA6304700855D6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EA4C3891DA6304700855D6B /* Main.storyboard */; };
 		1EA4C38D1DA6304700855D6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EA4C38C1DA6304700855D6B /* Assets.xcassets */; };
 		1EA4C3901DA6304700855D6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EA4C38E1DA6304700855D6B /* LaunchScreen.storyboard */; };
+		1EA4C39A1DA6450B00855D6B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA4C3991DA6450B00855D6B /* SearchViewController.swift */; };
+		1EB636C51DA64B4B00262C82 /* MenuOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB636C41DA64B4B00262C82 /* MenuOptions.swift */; };
+		1EE836481DDF62540056AF08 /* CalCheckerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE836471DDF62540056AF08 /* CalCheckerTests.swift */; };
+		1EE836501DDF62830056AF08 /* SearchViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE8364F1DDF62830056AF08 /* SearchViewControllerTests.swift */; };
+		1EEEC9481DA8255800EB974F /* ResultViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEEC9471DA8255800EB974F /* ResultViewCell.swift */; };
+		251FB5B01DA7A76D00F76323 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FB5AF1DA7A76D00F76323 /* DetailViewController.swift */; };
+		251FB5B21DA7A78600F76323 /* SelectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FB5B11DA7A78600F76323 /* SelectedViewController.swift */; };
+		25F3D5001DA98FC700E09B7B /* download.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 25F3D4FF1DA98FC700E09B7B /* download.jpeg */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		1EE8364A1DDF62540056AF08 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1EA4C37A1DA6304700855D6B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1EA4C3811DA6304700855D6B;
+			remoteInfo = CalChecker;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		1E6C0D141DE361320055D87C /* URLConnect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLConnect.swift; sourceTree = "<group>"; };
+		1E8395151DA85A6A00692867 /* RecipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
 		1EA4C3821DA6304700855D6B /* CalChecker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalChecker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EA4C3851DA6304700855D6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1EA4C3871DA6304700855D6B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1EA4C38A1DA6304700855D6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1EA4C38C1DA6304700855D6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1EA4C38F1DA6304700855D6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1EA4C3911DA6304700855D6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1EA4C3991DA6450B00855D6B /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		1EB636C41DA64B4B00262C82 /* MenuOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuOptions.swift; sourceTree = "<group>"; };
+		1EE836451DDF62540056AF08 /* CalCheckerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalCheckerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EE836471DDF62540056AF08 /* CalCheckerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalCheckerTests.swift; sourceTree = "<group>"; };
+		1EE836491DDF62540056AF08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1EE8364F1DDF62830056AF08 /* SearchViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewControllerTests.swift; path = Controller/SearchViewControllerTests.swift; sourceTree = "<group>"; };
+		1EEEC9471DA8255800EB974F /* ResultViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewCell.swift; sourceTree = "<group>"; };
+		251FB5AF1DA7A76D00F76323 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		251FB5B11DA7A78600F76323 /* SelectedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedViewController.swift; sourceTree = "<group>"; };
+		25F3D4FF1DA98FC700E09B7B /* download.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = download.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,13 +62,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1EE836421DDF62540056AF08 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E6C0D131DE3530D0055D87C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1EA4C3991DA6450B00855D6B /* SearchViewController.swift */,
+				1EB636C41DA64B4B00262C82 /* MenuOptions.swift */,
+				251FB5AF1DA7A76D00F76323 /* DetailViewController.swift */,
+				251FB5B11DA7A78600F76323 /* SelectedViewController.swift */,
+				1EEEC9471DA8255800EB974F /* ResultViewCell.swift */,
+				1E8395151DA85A6A00692867 /* RecipeViewController.swift */,
+				1E6C0D141DE361320055D87C /* URLConnect.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		1EA4C3791DA6304700855D6B = {
 			isa = PBXGroup;
 			children = (
 				1EA4C3841DA6304700855D6B /* CalChecker */,
+				1EE836461DDF62540056AF08 /* CalCheckerTests */,
 				1EA4C3831DA6304700855D6B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				1EA4C3821DA6304700855D6B /* CalChecker.app */,
+				1EE836451DDF62540056AF08 /* CalCheckerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,14 +107,33 @@
 		1EA4C3841DA6304700855D6B /* CalChecker */ = {
 			isa = PBXGroup;
 			children = (
+				25F3D4FE1DA98EFC00E09B7B /* images */,
 				1EA4C3851DA6304700855D6B /* AppDelegate.swift */,
-				1EA4C3871DA6304700855D6B /* ViewController.swift */,
 				1EA4C3891DA6304700855D6B /* Main.storyboard */,
 				1EA4C38C1DA6304700855D6B /* Assets.xcassets */,
 				1EA4C38E1DA6304700855D6B /* LaunchScreen.storyboard */,
 				1EA4C3911DA6304700855D6B /* Info.plist */,
+				1E6C0D131DE3530D0055D87C /* Controllers */,
 			);
 			path = CalChecker;
+			sourceTree = "<group>";
+		};
+		1EE836461DDF62540056AF08 /* CalCheckerTests */ = {
+			isa = PBXGroup;
+			children = (
+				1EE836471DDF62540056AF08 /* CalCheckerTests.swift */,
+				1EE836491DDF62540056AF08 /* Info.plist */,
+				1EE8364F1DDF62830056AF08 /* SearchViewControllerTests.swift */,
+			);
+			path = CalCheckerTests;
+			sourceTree = "<group>";
+		};
+		25F3D4FE1DA98EFC00E09B7B /* images */ = {
+			isa = PBXGroup;
+			children = (
+				25F3D4FF1DA98FC700E09B7B /* download.jpeg */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,19 +156,42 @@
 			productReference = 1EA4C3821DA6304700855D6B /* CalChecker.app */;
 			productType = "com.apple.product-type.application";
 		};
+		1EE836441DDF62540056AF08 /* CalCheckerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1EE8364E1DDF62540056AF08 /* Build configuration list for PBXNativeTarget "CalCheckerTests" */;
+			buildPhases = (
+				1EE836411DDF62540056AF08 /* Sources */,
+				1EE836421DDF62540056AF08 /* Frameworks */,
+				1EE836431DDF62540056AF08 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1EE8364B1DDF62540056AF08 /* PBXTargetDependency */,
+			);
+			name = CalCheckerTests;
+			productName = CalCheckerTests;
+			productReference = 1EE836451DDF62540056AF08 /* CalCheckerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		1EA4C37A1DA6304700855D6B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Abisola Adeniran";
 				TargetAttributes = {
 					1EA4C3811DA6304700855D6B = {
 						CreatedOnToolsVersion = 8.0;
 						ProvisioningStyle = Automatic;
+					};
+					1EE836441DDF62540056AF08 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1EA4C3811DA6304700855D6B;
 					};
 				};
 			};
@@ -114,6 +209,7 @@
 			projectRoot = "";
 			targets = (
 				1EA4C3811DA6304700855D6B /* CalChecker */,
+				1EE836441DDF62540056AF08 /* CalCheckerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -124,8 +220,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EA4C3901DA6304700855D6B /* LaunchScreen.storyboard in Resources */,
+				25F3D5001DA98FC700E09B7B /* download.jpeg in Resources */,
 				1EA4C38D1DA6304700855D6B /* Assets.xcassets in Resources */,
 				1EA4C38B1DA6304700855D6B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1EE836431DDF62540056AF08 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,12 +240,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EA4C3881DA6304700855D6B /* ViewController.swift in Sources */,
+				1E6C0D151DE361320055D87C /* URLConnect.swift in Sources */,
+				1EEEC9481DA8255800EB974F /* ResultViewCell.swift in Sources */,
+				1EB636C51DA64B4B00262C82 /* MenuOptions.swift in Sources */,
+				251FB5B01DA7A76D00F76323 /* DetailViewController.swift in Sources */,
+				1EA4C39A1DA6450B00855D6B /* SearchViewController.swift in Sources */,
+				251FB5B21DA7A78600F76323 /* SelectedViewController.swift in Sources */,
 				1EA4C3861DA6304700855D6B /* AppDelegate.swift in Sources */,
+				1E8395161DA85A6A00692867 /* RecipeViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1EE836411DDF62540056AF08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EE836501DDF62830056AF08 /* SearchViewControllerTests.swift in Sources */,
+				1EE836481DDF62540056AF08 /* CalCheckerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1EE8364B1DDF62540056AF08 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1EA4C3811DA6304700855D6B /* CalChecker */;
+			targetProxy = 1EE8364A1DDF62540056AF08 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1EA4C3891DA6304700855D6B /* Main.storyboard */ = {
@@ -181,6 +308,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -231,6 +359,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -280,6 +409,34 @@
 			};
 			name = Release;
 		};
+		1EE8364C1DDF62540056AF08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CalCheckerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.abi.CalCheckerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CalChecker.app/CalChecker";
+			};
+			name = Debug;
+		};
+		1EE8364D1DDF62540056AF08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CalCheckerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.abi.CalCheckerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CalChecker.app/CalChecker";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -299,6 +456,16 @@
 				1EA4C3961DA6304700855D6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1EE8364E1DDF62540056AF08 /* Build configuration list for PBXNativeTarget "CalCheckerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EE8364C1DDF62540056AF08 /* Debug */,
+				1EE8364D1DDF62540056AF08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
