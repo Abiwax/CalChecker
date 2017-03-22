@@ -17,6 +17,8 @@ class RecipeViewController: UIViewController{
     @IBOutlet var caloriesLabel: UILabel!
     @IBOutlet var servingsLabel: UILabel!
     
+    var recipeInfo: RecipeInfo!
+    
     override func viewDidLoad() {
         DispatchQueue.main.async(execute:{
             self.fillView();
@@ -25,66 +27,50 @@ class RecipeViewController: UIViewController{
     
     
     func fillView(){
-        let recipe = UserDefaults.standard.object(forKey: "selectedRecipe") as! [String: String]
-        let dictionary = UserDefaults.standard.dictionary(forKey: "RecipeDetails")
-        if(dictionary != nil){
-            let keyExistsCe = dictionary!["cooking_time_min"] != nil
-            let keyExistsPe = dictionary!["preparation_time_min"] != nil
-            if(keyExistsCe){
-                let cook_time = dictionary!["cooking_time_min"] as! String
-                self.timeLabel.text = cook_time + " mins"
+        
+        let cook_time : String = {
+            var time: String!
+            if let cook_time_min = recipeInfo.cooking_time_min {
+                time = cook_time_min
             }
-            else if(keyExistsPe){
-                let cook_time = dictionary!["preparation_time_min"] as! String
-                self.timeLabel.text = cook_time + " mins"
-            }
-            else{
-                self.timeLabel.text = ""
-            }
-            let keyExistsNo = dictionary!["number_of_servings"] != nil;
-            if(keyExistsNo){
-                let no_persons = dictionary!["number_of_servings"] as! String;
-                self.servingsLabel.text = no_persons;
-            }
-            else{
-                self.servingsLabel.text = "";
-            }
-            let keyExistsSe = dictionary!["serving_sizes"] != nil
-            if(keyExistsSe){
-                let serving_size = dictionary!["serving_sizes"] as! [String: Any]
-                let serving = serving_size["serving"] as! [String: String]
-                self.caloriesLabel.text = serving["calories"]
+            else if let cook_time_min = recipeInfo.preparation_time_min {
+                time = cook_time_min
                 
-            }else{
-                self.caloriesLabel.text = ""
             }
-            self.loadDetails(recipeDetails: recipe)
-        }
-        else{
-            self.loadDetails(recipeDetails: recipe)
-            self.timeLabel.text = "Loading ...."
-            self.servingsLabel.text = "Loading ...."
-            self.caloriesLabel.text = "Loading ...."
-        }
-    }
-    
-    
-    func loadDetails(recipeDetails: [String: String]){
-        let recipe = recipeDetails
-        let r_name = recipe["recipe_name"]
-        let r_desc = recipe["recipe_description"]
+            else{
+                time = ""
+            }
+            
+            return time
+        }()
+        
+        self.timeLabel.text = cook_time + " mins"
+        
+        guard let no_persons = recipeInfo.number_of_servings else { return }
+        self.servingsLabel.text = no_persons;
+        
+        guard let calories = recipeInfo.calories else { return }
+        self.caloriesLabel.text = calories
+        
+        
+        let r_name = recipeInfo.recipe_name
+        let r_desc = recipeInfo.recipe_description
+        
         self.nameValue.text = r_name;
         self.detailsValue.text = r_desc
-        let keyExistsImage = recipe["recipe_image"] != nil
-        if(keyExistsImage){
-            let r_img = recipe["recipe_image"]
-            let imageR = NSURL(string: r_img!)
+        
+        if let imageData = recipeInfo.recipe_image {
+            let imageR = NSURL(string: imageData)
             let imageData = NSData(contentsOf: imageR! as URL)
             self.imageDetails.image = UIImage(data: (imageData)! as Data);
         }
         else{
-            let r_img = UIImage(named: "download.jpeg");
-            self.imageDetails.image = r_img
+            self.imageDetails.image = UIImage(named: "download.jpeg");
         }
+        
+    
+        
     }
+    
+
 }

@@ -15,6 +15,11 @@
 		1EA4C3901DA6304700855D6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EA4C38E1DA6304700855D6B /* LaunchScreen.storyboard */; };
 		1EA4C39A1DA6450B00855D6B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA4C3991DA6450B00855D6B /* SearchViewController.swift */; };
 		1EB636C51DA64B4B00262C82 /* MenuOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB636C41DA64B4B00262C82 /* MenuOptions.swift */; };
+		1EBE86FF1E829C06001EB9AF /* FoodData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBE86FE1E829C06001EB9AF /* FoodData.swift */; };
+		1EBE87011E829C81001EB9AF /* CalorieSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBE87001E829C81001EB9AF /* CalorieSetup.swift */; };
+		1EBE87031E82A69E001EB9AF /* RecipeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBE87021E82A69E001EB9AF /* RecipeData.swift */; };
+		1EBE87051E82B0CB001EB9AF /* RecipeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBE87041E82B0CB001EB9AF /* RecipeInfo.swift */; };
+		1EBE87081E83057C001EB9AF /* ExtraTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBE87071E83057C001EB9AF /* ExtraTools.swift */; };
 		1EE836481DDF62540056AF08 /* CalCheckerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE836471DDF62540056AF08 /* CalCheckerTests.swift */; };
 		1EE836501DDF62830056AF08 /* SearchViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE8364F1DDF62830056AF08 /* SearchViewControllerTests.swift */; };
 		1EEEC9481DA8255800EB974F /* ResultViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEEC9471DA8255800EB974F /* ResultViewCell.swift */; };
@@ -44,6 +49,11 @@
 		1EA4C3911DA6304700855D6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1EA4C3991DA6450B00855D6B /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		1EB636C41DA64B4B00262C82 /* MenuOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuOptions.swift; sourceTree = "<group>"; };
+		1EBE86FE1E829C06001EB9AF /* FoodData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodData.swift; path = Model/FoodData.swift; sourceTree = "<group>"; };
+		1EBE87001E829C81001EB9AF /* CalorieSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalorieSetup.swift; path = Model/CalorieSetup.swift; sourceTree = "<group>"; };
+		1EBE87021E82A69E001EB9AF /* RecipeData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecipeData.swift; path = Model/RecipeData.swift; sourceTree = "<group>"; };
+		1EBE87041E82B0CB001EB9AF /* RecipeInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecipeInfo.swift; path = Model/RecipeInfo.swift; sourceTree = "<group>"; };
+		1EBE87071E83057C001EB9AF /* ExtraTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExtraTools.swift; path = Extras/ExtraTools.swift; sourceTree = "<group>"; };
 		1EE836451DDF62540056AF08 /* CalCheckerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalCheckerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EE836471DDF62540056AF08 /* CalCheckerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalCheckerTests.swift; sourceTree = "<group>"; };
 		1EE836491DDF62540056AF08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -107,6 +117,8 @@
 		1EA4C3841DA6304700855D6B /* CalChecker */ = {
 			isa = PBXGroup;
 			children = (
+				1EBE87061E83055B001EB9AF /* Extras */,
+				1EBE86FD1E7F8AA9001EB9AF /* Model */,
 				25F3D4FE1DA98EFC00E09B7B /* images */,
 				1EA4C3851DA6304700855D6B /* AppDelegate.swift */,
 				1EA4C3891DA6304700855D6B /* Main.storyboard */,
@@ -116,6 +128,25 @@
 				1E6C0D131DE3530D0055D87C /* Controllers */,
 			);
 			path = CalChecker;
+			sourceTree = "<group>";
+		};
+		1EBE86FD1E7F8AA9001EB9AF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1EBE87001E829C81001EB9AF /* CalorieSetup.swift */,
+				1EBE87021E82A69E001EB9AF /* RecipeData.swift */,
+				1EBE87041E82B0CB001EB9AF /* RecipeInfo.swift */,
+				1EBE86FE1E829C06001EB9AF /* FoodData.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		1EBE87061E83055B001EB9AF /* Extras */ = {
+			isa = PBXGroup;
+			children = (
+				1EBE87071E83057C001EB9AF /* ExtraTools.swift */,
+			);
+			name = Extras;
 			sourceTree = "<group>";
 		};
 		1EE836461DDF62540056AF08 /* CalCheckerTests */ = {
@@ -186,6 +217,7 @@
 				TargetAttributes = {
 					1EA4C3811DA6304700855D6B = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = J585BB35C4;
 						ProvisioningStyle = Automatic;
 					};
 					1EE836441DDF62540056AF08 = {
@@ -243,11 +275,16 @@
 				1E6C0D151DE361320055D87C /* URLConnect.swift in Sources */,
 				1EEEC9481DA8255800EB974F /* ResultViewCell.swift in Sources */,
 				1EB636C51DA64B4B00262C82 /* MenuOptions.swift in Sources */,
+				1EBE87011E829C81001EB9AF /* CalorieSetup.swift in Sources */,
 				251FB5B01DA7A76D00F76323 /* DetailViewController.swift in Sources */,
 				1EA4C39A1DA6450B00855D6B /* SearchViewController.swift in Sources */,
+				1EBE87081E83057C001EB9AF /* ExtraTools.swift in Sources */,
+				1EBE86FF1E829C06001EB9AF /* FoodData.swift in Sources */,
 				251FB5B21DA7A78600F76323 /* SelectedViewController.swift in Sources */,
+				1EBE87031E82A69E001EB9AF /* RecipeData.swift in Sources */,
 				1EA4C3861DA6304700855D6B /* AppDelegate.swift in Sources */,
 				1E8395161DA85A6A00692867 /* RecipeViewController.swift in Sources */,
+				1EBE87051E82B0CB001EB9AF /* RecipeInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +426,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = J585BB35C4;
 				INFOPLIST_FILE = CalChecker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.abi.CalChecker;
@@ -401,6 +439,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = J585BB35C4;
 				INFOPLIST_FILE = CalChecker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.abi.CalChecker;
