@@ -96,8 +96,8 @@ app.post('/recipe', function(req, res) {
 
 
 function getRequest(search, method){
-    var apiKey           = '64e7aaea194d4e6c828f87970bb9d101';
-    var sharedSecret     = '9e1b13609c3d47dda99316ad1648c33b';
+    var apiKey           = '';
+    var sharedSecret     = '';
     var timestamp = Math.floor(new Date().getTime()/1000);
     var nonce = Math.random().toString(36).replace(/[^a-z]/, '').substr(2);
 
