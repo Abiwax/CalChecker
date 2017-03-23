@@ -20,10 +20,17 @@ class DetailViewController: UITableViewController{
         self.tableView.reloadData()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        self.dismissActivityIndicator()
+    }
+    
     func getFoodData(){
         calorieSetup.loadAllFood()
         self.foodDataSet = self.calorieSetup.foodDataSet
     }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return foodDataSet.count;
     }

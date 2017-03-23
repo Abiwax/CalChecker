@@ -25,6 +25,7 @@
 		1EEEC9481DA8255800EB974F /* ResultViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEEC9471DA8255800EB974F /* ResultViewCell.swift */; };
 		251FB5B01DA7A76D00F76323 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FB5AF1DA7A76D00F76323 /* DetailViewController.swift */; };
 		251FB5B21DA7A78600F76323 /* SelectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FB5B11DA7A78600F76323 /* SelectedViewController.swift */; };
+		25306FB51E837AAB00542A70 /* RecentSearch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 25306FB31E837AAB00542A70 /* RecentSearch.xcdatamodeld */; };
 		25F3D5001DA98FC700E09B7B /* download.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 25F3D4FF1DA98FC700E09B7B /* download.jpeg */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,7 @@
 		1EEEC9471DA8255800EB974F /* ResultViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewCell.swift; sourceTree = "<group>"; };
 		251FB5AF1DA7A76D00F76323 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		251FB5B11DA7A78600F76323 /* SelectedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedViewController.swift; sourceTree = "<group>"; };
+		25306FB41E837AAB00542A70 /* RecentSearch.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RecentSearch.xcdatamodel; sourceTree = "<group>"; };
 		25F3D4FF1DA98FC700E09B7B /* download.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = download.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,6 +128,7 @@
 				1EA4C38E1DA6304700855D6B /* LaunchScreen.storyboard */,
 				1EA4C3911DA6304700855D6B /* Info.plist */,
 				1E6C0D131DE3530D0055D87C /* Controllers */,
+				25306FB31E837AAB00542A70 /* RecentSearch.xcdatamodeld */,
 			);
 			path = CalChecker;
 			sourceTree = "<group>";
@@ -217,7 +220,7 @@
 				TargetAttributes = {
 					1EA4C3811DA6304700855D6B = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = J585BB35C4;
+						DevelopmentTeam = ME2D76LVKE;
 						ProvisioningStyle = Automatic;
 					};
 					1EE836441DDF62540056AF08 = {
@@ -272,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25306FB51E837AAB00542A70 /* RecentSearch.xcdatamodeld in Sources */,
 				1E6C0D151DE361320055D87C /* URLConnect.swift in Sources */,
 				1EEEC9481DA8255800EB974F /* ResultViewCell.swift in Sources */,
 				1EB636C51DA64B4B00262C82 /* MenuOptions.swift in Sources */,
@@ -426,10 +430,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = J585BB35C4;
+				DEVELOPMENT_TEAM = ME2D76LVKE;
 				INFOPLIST_FILE = CalChecker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.abi.CalChecker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.abiwax.CalChecker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -439,10 +443,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = J585BB35C4;
+				DEVELOPMENT_TEAM = ME2D76LVKE;
 				INFOPLIST_FILE = CalChecker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.abi.CalChecker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.abiwax.CalChecker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -507,6 +511,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		25306FB31E837AAB00542A70 /* RecentSearch.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				25306FB41E837AAB00542A70 /* RecentSearch.xcdatamodel */,
+			);
+			currentVersion = 25306FB41E837AAB00542A70 /* RecentSearch.xcdatamodel */;
+			name = RecentSearch.xcdatamodeld;
+			path = Model/RecentSearch.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 1EA4C37A1DA6304700855D6B /* Project object */;
 }

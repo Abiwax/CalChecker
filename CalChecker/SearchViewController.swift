@@ -7,17 +7,26 @@
 //
 
 import UIKit
+import CoreData
+
 class SearchViewController: UIViewController{
     
     @IBOutlet var searchText: UITextField!
     @IBOutlet var buttonText: UIButton!
     @IBOutlet var errorLabel: UILabel!
     
-    
+    let persistentContainer = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer
     let calSetup = CalorieSetup()
     override func viewDidLoad() {
         super.viewDidLoad();
         
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        self.dismissActivityIndicator()
     }
     
     
@@ -44,6 +53,12 @@ class SearchViewController: UIViewController{
             
         }
         else{
+            do{
+                try writeSearch()
+            }
+            catch {
+                print("Not working")
+            }
             let newText: String = textValue!.replacingOccurrences(of: " ", with: "")
             
             let postString = "search=\(newText)";
@@ -159,5 +174,40 @@ class SearchViewController: UIViewController{
         
     }
     
+    func saveContext() throws {
+        let context = persistentContainer?.viewContext
+        if context!.hasChanges{
+            try context!.save()
+        }
+    }
+    
+    func writeSearch() throws {
+        let context = persistentContainer?.viewContext
+        let search = Search(context: context!)
+        if let searchval = searchText.text {
+            search.searchstring = searchval
+            do {
+                try saveContext()
+            }
+            catch {
+                print("unable to save")
+            }
+        }
+        self.readSearch()
+        
+    }
+    
+    func readSearch() {
+        let context = persistentContainer!.viewContext
+        let searchRequest: NSFetchRequest<Search> = Search.fetchRequest()
+        do {
+            let searches = try context.fetch(searchRequest)
+            print(searches)
+        }
+        catch {
+            print("unable to save")
+        }
+        
+    }
     
 }

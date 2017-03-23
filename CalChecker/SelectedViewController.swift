@@ -29,6 +29,13 @@ class SelectedViewController: UIViewController, UITableViewDelegate, UITableView
         tableView.reloadData();
         
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        self.dismissActivityIndicator()
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1;
     }
