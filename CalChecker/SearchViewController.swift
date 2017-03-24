@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class SearchViewController: UIViewController{
+class SearchViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet var searchText: UITextField!
     @IBOutlet var buttonText: UIButton!
@@ -17,8 +17,18 @@ class SearchViewController: UIViewController{
     
     let persistentContainer = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer
     let calSetup = CalorieSetup()
+    
+    @IBOutlet var tableView: UITableView!
+    
+    var recentSearch:[Search] = []
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad();
+        tableView.dataSource = self
+        tableView.delegate = self
+        
+        self.readSearch()
         
         
     }
@@ -60,56 +70,59 @@ class SearchViewController: UIViewController{
                 print("Not working")
             }
             let newText: String = textValue!.replacingOccurrences(of: " ", with: "")
+            self.getFood(food: newText)
             
-            let postString = "search=\(newText)";
-            let myURL:URL = URL(string: "http://127.0.0.1:4551/food")!
-            var request = URLRequest(url: myURL);
-            request.httpMethod = "POST"
-            request.httpBody = postString.data(using: String.Encoding.utf8)!
-            
-            let session = URLSession.shared
-            let task = session.dataTask(with: request){ (data, response, error) -> Void in
-                if (error != nil) {
-                    print(error!)
-                } else {
-                    
-                    let json = try? JSONSerialization.jsonObject(with: data!, options: [])
-                    
-                    let dictionary = json as? [String: Any]
-                    let keyExists = dictionary!["food"] != nil
-                    self.calSetup.foodDataSet = []
-                    if(!keyExists){
-                        DispatchQueue.main.async(execute: {
-                            self.displayMyAlertMessage("We currently don't have that food, visit another time.");
-                        })
-                        
-                    }
-                    else{
-                        let nestedArray = dictionary!["food"] as! NSArray
-                        
-                        for(index, _) in nestedArray.enumerated(){
-                            let food_index = nestedArray[index] as! [String: AnyObject]
-                            
-                            let food_id = food_index["food_id"] as! String
-                            let food_name = food_index["food_name"] as! String
-                            let food_url = food_index["food_url"] as! String
-                            let food_description = food_index["food_description"] as! String
-                            let food_type = food_index["food_type"] as! String
-                            
-                            let foodData = FoodData(food_id: food_id, food_name: food_name, food_url: food_url, food_description: food_description, food_type: food_type)
-                            self.calSetup.addFood(foodData: foodData)
-                        }
-                        self.calSetup.saveFood()
-                        
-                        self.recipeSearch(post: postString)
-                        
-                    }
-                }
-            }
-            task.resume()
         }
     }
 
+    func getFood(food: String){
+        let postString = "search=\(food)";
+        let myURL:URL = URL(string: "http://127.0.0.1:4551/food")!
+        var request = URLRequest(url: myURL);
+        request.httpMethod = "POST"
+        request.httpBody = postString.data(using: String.Encoding.utf8)!
+        
+        let session = URLSession.shared
+        let task = session.dataTask(with: request){ (data, response, error) -> Void in
+            if (error != nil) {
+                print(error!)
+            } else {
+                
+                let json = try? JSONSerialization.jsonObject(with: data!, options: [])
+                
+                let dictionary = json as? [String: Any]
+                let keyExists = dictionary!["food"] != nil
+                self.calSetup.foodDataSet = []
+                if(!keyExists){
+                    DispatchQueue.main.async(execute: {
+                        self.displayMyAlertMessage("We currently don't have that food, visit another time.");
+                    })
+                    
+                }
+                else{
+                    let nestedArray = dictionary!["food"] as! NSArray
+                    
+                    for(index, _) in nestedArray.enumerated(){
+                        let food_index = nestedArray[index] as! [String: AnyObject]
+                        
+                        let food_id = food_index["food_id"] as! String
+                        let food_name = food_index["food_name"] as! String
+                        let food_url = food_index["food_url"] as! String
+                        let food_description = food_index["food_description"] as! String
+                        let food_type = food_index["food_type"] as! String
+                        
+                        let foodData = FoodData(food_id: food_id, food_name: food_name, food_url: food_url, food_description: food_description, food_type: food_type)
+                        self.calSetup.addFood(foodData: foodData)
+                    }
+                    self.calSetup.saveFood()
+                    
+                    self.recipeSearch(post: postString)
+                    
+                }
+            }
+        }
+        task.resume()
+    }
     
     func recipeSearch(post: String){
         let postString = post;
@@ -165,6 +178,13 @@ class SearchViewController: UIViewController{
         task.resume()
     }
     
+    
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int)
+    {
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.textColor = UIColor.white
+    }
+    
     func displayMyAlertMessage(_ userMessage: String)
     {
         let myAlert = UIAlertController(title: "No data", message: userMessage, preferredStyle: UIAlertControllerStyle.alert);
@@ -193,8 +213,45 @@ class SearchViewController: UIViewController{
                 print("unable to save")
             }
         }
-        self.readSearch()
         
+        
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return recentSearch.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let object = recentSearch[(indexPath as NSIndexPath).row]
+        cell.textLabel!.text = object.searchstring
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.displayActivityIndicator()
+        let selectedRow = (indexPath as NSIndexPath).row
+        let search = recentSearch[selectedRow]
+        self.getFood(food: search.searchstring!)
+        
+    }
+
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let delete = UITableViewRowAction(style: .normal, title: "Delete") { action, index in
+            self.deleteSearch(search: self.recentSearch[index.row])
+            
+        }
+        delete.backgroundColor = UIColor.red
+        
+        return [delete]
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Most Recent Searches"
     }
     
     func readSearch() {
@@ -202,12 +259,35 @@ class SearchViewController: UIViewController{
         let searchRequest: NSFetchRequest<Search> = Search.fetchRequest()
         do {
             let searches = try context.fetch(searchRequest)
-            print(searches)
+            recentSearch = searches
+            if recentSearch.count > 0{
+                tableView.isHidden = false
+                tableView.reloadData()
+            }
+//            for item in searches {
+//                print(item.searchstring!)
+//            }
         }
         catch {
             print("unable to save")
         }
         
+    }
+    
+    func deleteSearch(search: Search){
+        let context = persistentContainer!.viewContext
+        
+        if let result = try? context.existingObject(with: search.objectID) {
+            context.delete(result)
+            do {
+                try saveContext()
+            }
+            catch {
+                print("unable to save")
+            }
+        }
+        
+        self.readSearch()
     }
     
 }
