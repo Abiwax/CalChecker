@@ -1,8 +1,8 @@
 # CalChecker
 A simple food calorie checker application that allows users to search for Food calories and recipes alike.
-Allows user to select from previously searched items.
+Allows user to select from previously searched items(Uses core data for storage).
 
-Before running the ionic application, get your fat secret API key and Consumer Secret from the link below
+Before running the application, get your fat secret API key and Consumer Secret from the link below
 https://platform.fatsecret.com/api/
 
 Enter your keys on line 9 and 10 of the server.js file.
@@ -15,6 +15,7 @@ Run ```npm install```
 Then ```node server.js```
 
 Once the server is on, run your .xcodeproj and run application on your device or simulator.
+
 
 ###Screen Shots
 <div>
