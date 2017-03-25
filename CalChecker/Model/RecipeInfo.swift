@@ -128,7 +128,6 @@ class RecipeInfo{
                 else if ((recipe_image as? NSArray) != nil){
                     let recipes = recipe_image as? NSArray
                     let recipe = recipes?[0]
-                    print(recipe)
                     self.recipe_image = recipe as! String?
                 }
                 
