@@ -6,6 +6,8 @@ var crypto  = require('crypto');
 var parser = require('xml2json');
 
 var fatSecretRestUrl = 'http://platform.fatsecret.com/rest/server.api';
+var apiKey           = '';
+var sharedSecret     = '';
 
 //CORS Middleware, causes Express to allow Cross-Origin Requests
 var allowCrossDomain = function(req, res, next) {
@@ -31,9 +33,15 @@ process.on('SIGTERM', function() {
     app.close();
 });
 
-var server = app.listen(4551, function() {
+
+if (apiKey == '' || sharedSecret == '') {
+  console.log("Please input your api and shared secret gotten from Fat Secret")
+}
+else{
+  var server = app.listen(4551, function() {
     console.log('Listening on port %d', server.address().port);
-});
+  });
+}
 
 // Creates a new bmi in the database
 app.post('/food', function(req, res) {

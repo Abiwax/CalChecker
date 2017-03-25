@@ -122,24 +122,32 @@ class RecipeInfo{
             let recipes_images = recipe_images as! [String: Any]
             
             if let recipe_image = recipes_images["recipe_image"]{
-                self.recipe_image = recipe_image as? String
+                if ((recipe_image as? String) != nil){
+                    self.recipe_image = recipe_image as? String
+                }
+                else if ((recipe_image as? NSArray) != nil){
+                    let recipes = recipe_image as? NSArray
+                    let recipe = recipes?[0]
+                    print(recipe)
+                    self.recipe_image = recipe as! String?
+                }
+                
             }
             else{
                 self.recipe_image = ""
             }
         }
-        
-        if let serving_types = json["serving_types"]{
+        var serving: [String: Any]!
+        if let serving_types = json["serving_sizes"]{
             let serving_type =  serving_types as! [String: Any]
             if let servings = serving_type["serving"]{
-                let serving = servings as! [String: Any]
+                serving = servings as! [String: Any]
                 
                 if let serving_size = serving["serving_size"] {
                     self.serving_size = serving_size as? String
                 }
                 
                 if let calories = serving["calories"]{
-                    print(calories)
                     self.calories = calories as? String
                 }
                 

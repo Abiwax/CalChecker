@@ -101,7 +101,6 @@ class SelectedViewController: UIViewController, UITableViewDelegate, UITableView
                 let json = try? JSONSerialization.jsonObject(with: data!, options: []) as! [String: Any]
                 
                 let recipeInfo = RecipeInfo(json: json!)
-                print(json)
                 let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                 let nextViewController = storyBoard.instantiateViewController(withIdentifier: "RecipeViewController") as! RecipeViewController
                 nextViewController.recipeInfo = recipeInfo

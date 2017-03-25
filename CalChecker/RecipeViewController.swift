@@ -20,9 +20,7 @@ class RecipeViewController: UIViewController{
     var recipeInfo: RecipeInfo!
     
     override func viewDidLoad() {
-        DispatchQueue.main.async(execute:{
-            self.fillView();
-        });
+        self.fillView();
     }
     
     
